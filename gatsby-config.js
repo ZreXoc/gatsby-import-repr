@@ -6,5 +6,12 @@ module.exports = {
     title: `bug+repr`,
     siteUrl: `https://www.yourdomain.tld`,
   },
-  plugins: [],
+  plugins: [
+    {
+      resolve: "gatsby-plugin-root-import",
+      options: {
+        '@components': path.join(__dirname, "src", "components"),
+      },
+    },
+  ],
 }
